@@ -5,12 +5,10 @@ const routes = express.Router();
 
 routes.get("/", (req, res) => {
   return res.send("Hello Nkiambi");
-});
+}); //rota principal
 
-routes.get("/planets", (req, res) => {
-  return res.json(PlanetController.store);
-});
-
-routes.post("/planet", PlanetController.store);
+routes.get("/allplanets", PlanetController.show); //rota de todos os planetas
+routes.post("/planet/", PlanetController.store); //rota pra buscar da API
+routes.post("/add", PlanetController.addPlanet); //rota pra adicionar novo
 
 module.exports = routes;

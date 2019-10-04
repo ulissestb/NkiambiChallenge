@@ -1,6 +1,7 @@
 const { Schema, model } = require("mongoose");
 
 const PlanetSchema = new Schema({
+  //Forma que está sendo adicionado no banco nome,clima e terreno
   name: {
     type: String,
     required: true

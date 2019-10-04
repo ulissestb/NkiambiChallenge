@@ -5,12 +5,13 @@ const mongoose = require("mongoose");
 const server = express();
 
 mongoose.connect(
-  "mongodb+srv://omnistack:nkiambi@nkiambi-jyj7u.mongodb.net/admin?retryWrites=true&w=majority",
+  "mongodb+srv://ulisses:nkiambi@cluster0-jyj7u.azure.mongodb.net/nkiambi?retryWrites=true&w=majority",
   {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true
   }
 );
 
 server.use(express.json());
-server.use(routes);
+server.use(routes); //todas as rotas
 server.listen(3333);
