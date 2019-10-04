@@ -5,11 +5,11 @@ const PlanetSchema = new Schema({
     type: String,
     required: true
   },
-  clima: {
+  climate: {
     type: String,
     required: true
   },
-  terreno: {
+  terrain: {
     type: String,
     required: true
   }
