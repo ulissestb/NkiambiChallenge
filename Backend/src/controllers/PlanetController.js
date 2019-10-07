@@ -4,11 +4,9 @@ const Planet = require("../models/Planet");
 module.exports = {
   //Busca planeta da API FUNCIONANDO
   async store(req, res) {
-    const planetId = req.body.id;
+    const { id } = req.body;
 
-    const response = await axios.get(
-      `https://swapi.co/api/planets/${planetId}`
-    );
+    const response = await axios.get(`https://swapi.co/api/planets/${id}`);
     const { name, climate, terrain } = response.data;
 
     const planetCreate = await Planet.create(
@@ -21,6 +19,7 @@ module.exports = {
         return console.log(err);
       }
     );
+    console.log(planetCreate);
     return res.send(planetCreate);
   },
   //Mostra todos os planetas no Banco A SER FEITO
@@ -43,5 +42,12 @@ module.exports = {
       }
     );
     return res.json(add);
+  },
+  //Deleta o planeta pelo id
+  async removePlanet(req, res) {
+    const { id } = req.body;
+
+    const remove = Planet.findByIdAndDelete({ id });
+    return res.json(remove);
   }
 };
