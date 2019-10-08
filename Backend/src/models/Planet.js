@@ -13,6 +13,9 @@ const PlanetSchema = new Schema({
   terrain: {
     type: String,
     required: true
+  },
+  films: {
+    type: Number
   }
 });
 

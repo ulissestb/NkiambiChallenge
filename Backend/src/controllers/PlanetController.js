@@ -7,20 +7,20 @@ module.exports = {
     const { id } = req.body;
 
     const response = await axios.get(`https://swapi.co/api/planets/${id}`);
-    const { name, climate, terrain } = response.data;
+    const { name, climate, terrain, films } = response.data;
 
     const planetCreate = await Planet.create(
       {
         name,
         climate,
-        terrain
+        terrain,
+        films: films.length
       },
       function(err) {
         return console.log(err);
       }
     );
-    console.log(planetCreate);
-    return res.send(planetCreate);
+    return res.json(planetCreate);
   },
   //Mostra todos os planetas no Banco A SER FEITO
   async show(req, res) {
@@ -41,7 +41,7 @@ module.exports = {
         return console.log(err);
       }
     );
-    return res.json(add);
+    return res.json({ add });
   },
   //Deleta o planeta pelo id
   async removePlanet(req, res) {
