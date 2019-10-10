@@ -1,0 +1,16 @@
+.Main-container .btn {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Main-container .btn button {
+  width: 200px;
+  height: 45px;
+  color: #fff;
+  background-color: rgb(34, 25, 66);
+  border-radius: 8px;
+  border: 0;
+  font-size: 15px;
+  cursor: pointer;
+}
