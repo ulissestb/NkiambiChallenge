@@ -4,7 +4,7 @@ const Planet = require("../models/Planet");
 module.exports = {
   //Busca planeta da API FUNCIONANDO
   async store(req, res) {
-    const { id } = req.body;
+    const { id } = req.params;
 
     const response = await axios.get(`https://swapi.co/api/planets/${id}`);
     const { name, climate, terrain, films } = response.data;
@@ -20,11 +20,21 @@ module.exports = {
         return console.log(err);
       }
     );
-    return res.json(planetCreate);
+    return res.json(response.data);
   },
-  //Mostra todos os planetas no Banco A SER FEITO
+  //Mostra todos os planetas no Banco FUNCIONANDO
   async show(req, res) {
-    res.send("listar planetas");
+    const all = await Planet.find();
+    res.json(all);
+  },
+
+  //Busca por Nome FUNCIONANDO
+  async searchByName(req, res) {
+    const { name } = req.body;
+
+    const byName = await Planet.find({ name });
+
+    res.json(byName);
   },
 
   //adiciona o planeta no banco FUNCIONANDO
@@ -43,11 +53,11 @@ module.exports = {
     );
     return res.json({ add });
   },
-  //Deleta o planeta pelo id
+  //Deleta o planeta pelo id FUNCIONANDO
   async removePlanet(req, res) {
-    const { id } = req.body;
+    const { _id } = req.body;
 
-    const remove = Planet.findByIdAndDelete({ id });
+    const remove = await Planet.findByIdAndDelete({ _id });
     return res.json(remove);
   }
 };

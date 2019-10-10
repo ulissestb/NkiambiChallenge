@@ -7,8 +7,10 @@ routes.get("/", (req, res) => {
   return res.send("Hello Nkiambi");
 }); //rota principal
 
-routes.get("/allplanets", PlanetController.show); //rota de todos os planetas
-routes.post("/planet/", PlanetController.store); //rota pra buscar da API
-routes.post("/add", PlanetController.addPlanet); //rota pra adicionar novo
+routes.get("/planets", PlanetController.show); //rota de todos os planetas
+routes.get("/planets/:id/", PlanetController.store); //rota pra buscar da API
+routes.post("/planets/", PlanetController.searchByName);
+routes.post("planets/add", PlanetController.addPlanet); //rota pra adicionar novo
+routes.post("/planets/remove", PlanetController.removePlanet); //rota para remover planetas
 
 module.exports = routes;
