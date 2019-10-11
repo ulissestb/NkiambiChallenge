@@ -8,9 +8,21 @@ Esse projeto é um desafio proposto pelo Pedro Nkiambi, Tech Lead na Iblue Consu
 
 Para rodar esse programa siga o passo a passo: 
 -
-> - git https://github.com/ulissestb/NkiambiChallenge.git/
+> git clone https://github.com/ulissestb/NkiambiChallenge.git/
 
-- Após clonar o repositório, entre na pasta /backend e /frontend e instale as depêndencias:
-> - npm install
-> - or
-> - yarn install
+- Após clonar o repositório, entre na pasta /backend e /frontend e instale as dependências:
+>  npm install
+>  or
+>  yarn install
+
+- Após instaladas as dependências entre na pasta /backend e execute:
+> npm start
+> or
+> yarn start
+
+O servidor backend também se encontra [aqui](https://powerful-caverns-27496.herokuapp.com/)
+
+Após rodar o comando, entre com outro terminal na pasta /frontend e execute:
+> npm start
+> or
+> yarn start
