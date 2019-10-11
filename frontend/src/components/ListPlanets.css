@@ -1,50 +1,18 @@
 .planet-container {
-  width: 800px;
+  width: 1000px;
 }
-.list-planets {
+.list-planets .btnn {
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
-li {
-  list-style: none;
-  margin: 3px;
-  padding: 3px;
-}
-
-.form-list {
+.btnn {
   display: flex;
-  flex-direction: column;
-  width: 400px;
-  justify-content: center;
-  padding-left: 200px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 10px;
 }
-.form-list input {
-  border: 1px solid #000;
-  border-radius: 7px;
-  padding: 10px;
-  margin: 3px;
-}
-.form-list .btn {
-  width: 200px;
-  height: 45px;
-  color: #fff;
-  background-color: rgb(34, 25, 66);
-  border-radius: 8px;
-  border: 0;
-  font-size: 15px;
-  cursor: pointer;
-  margin: 5px;
-  margin-left: 100px;
-}
-.form-list .btn2 {
-  width: 200px;
-  height: 45px;
-  color: #fff;
-  background-color: rgb(142, 170, 216);
-  border-radius: 8px;
-  border: 0;
-  font-size: 15px;
-  cursor: pointer;
-  margin: 5px;
-  margin-left: 100px;
+.btnn button {
+  margin: 10px; 
 }
