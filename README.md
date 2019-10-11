@@ -1,6 +1,7 @@
 # NkiambiChallenge
 
 Esse projeto é um desafio proposto pelo Pedro Nkiambi, Tech Lead na Iblue Consulting.
+Veja ele [aqui](https://nkiambichallenge.herokuapp.com/)
 
 
 
