@@ -7,4 +7,8 @@
 .Header img {
   width: 150px;
   margin-top: 20px;
+  margin-bottom: 30px;
+}
+.Header h3 {
+  margin: 10px;
 }
