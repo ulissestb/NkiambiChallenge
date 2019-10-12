@@ -8,18 +8,18 @@ O desafio foi feito usando NodeJS, MongoDB e ReactJS.
 
 ### Para rodar este projeto: 
 - Clone este repositório:
- `git clone https://github.com/ulissestb/NkiambiChallenge.git/`
+> `git clone https://github.com/ulissestb/NkiambiChallenge.git/`
 
 - Após clonar o repositório, entre na pasta /backend e /frontend e instale as dependências:
-  `npm install`
+  > `npm install`
 
 
 - Após instaladas as dependências entre na pasta /backend e execute:
-`npm start`
+> `npm start`
 
 
 > **O servidor backend também se encontra [aqui](https://powerful-caverns-27496.herokuapp.com/)**
 
 - Após rodar o comando, entre com outro terminal na pasta /frontend e execute:
- `npm start`
+ > `npm start`
 
