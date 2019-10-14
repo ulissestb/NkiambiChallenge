@@ -9,8 +9,9 @@ routes.get("/", (req, res) => {
 
 routes.get("/planets", PlanetController.show); //rota de todos os planetas
 routes.get("/planets/:id/", PlanetController.store); //rota pra buscar da API
-routes.post("/planets/", PlanetController.searchByName);
-routes.post("planets/add", PlanetController.addPlanet); //rota pra adicionar novo
+routes.post("/planets/busca/", PlanetController.searchById); //rota pra buscar da API
+routes.post("/planets/name", PlanetController.searchByName);
+routes.post("/planets/add", PlanetController.addPlanet); //rota pra adicionar novo
 routes.post("/planets/remove", PlanetController.removePlanet); //rota para remover planetas
 
 module.exports = routes;

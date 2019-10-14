@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 
 import Main from "./pages/Main";
 import Planets from "./pages/Planets";
-import Search from "./pages/Search";
+import Busca from "./pages/Busca";
 
 import "./App.css";
 
@@ -12,8 +12,8 @@ function App() {
     <div className="App">
       <Switch>
         <Route exact path="/" component={Main} />
-        <Route path="/planets" component={Planets} />
-        <Route path="/planets/search" component={Search} />
+        <Route path="/planets" component={Planets} />]
+        <Route path="/busca" component={Busca} />
       </Switch>
     </div>
   );

@@ -11,3 +11,6 @@ export default function Planet() {
     </div>
   );
 }
+
+//routes.get("/planets/:id/", PlanetController.store); //rota pra buscar da API
+//routes.post("/planets/", PlanetController.searchByName);

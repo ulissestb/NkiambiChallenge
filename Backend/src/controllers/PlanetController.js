@@ -36,16 +36,23 @@ module.exports = {
 
     res.json(byName);
   },
+  // procura por ID
+  async searchById(req, res) {
+    const { _id } = req.body;
+    const byId = await Planet.find({ _id });
+    res.json(byId);
+  },
 
   //adiciona o planeta no banco FUNCIONANDO
   async addPlanet(req, res) {
-    const { name, climate, terrain } = req.body;
+    const { name, climate, terrain, films } = req.body;
 
     const add = await Planet.create(
       {
         name,
         climate,
-        terrain
+        terrain,
+        films
       },
       function(err) {
         return console.log(err);
