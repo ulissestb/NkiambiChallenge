@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import List from "./List";
 import Form from "./Form";
@@ -12,7 +13,9 @@ export default function ListPlanet() {
         <List />
       </>
       <hr></hr>
+      <Link to="/planets/search/">Buscar planeta</Link>
       <div className="form-list">
+        <h3>Adicione um Planeta</h3>
         <Form />
       </div>
     </div>
